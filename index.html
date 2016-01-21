@@ -9,8 +9,8 @@
 
 <body onload="main_GL()">
 <div align="center">
-<input type="text" id="n" oninput="calculate_vertices()" value="4"> congruent sides<br>
-<input type="text" id="theta" oninput="calculate_vertices()" value="90">-degree rotation<br>
+<input type="number" id="n" oninput="calculate_vertices()" value="4" min="3"> congruent sides<br>
+<input type="number" id="theta" oninput="calculate_vertices()" value="90" step="any">-degree rotation<br>
 </div>
 
 <canvas id="GL_canvas" width="800" height="800">
