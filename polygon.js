@@ -62,7 +62,6 @@ function main_GL() {
 
     do {
         error_code = glGetError();
-        console.log("OpenGL error status:  " + error_code);
     } while (error_code !== GL_NO_ERROR);
     setInterval(draw, 1000 / 10);
     return;
