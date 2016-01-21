@@ -1,11 +1,21 @@
 var polygon = [];
 var X = 0, Y = 1;
 var n = 4;
+var offset = 90;
 
-function calculate_vertices(n, offset) {
+function calculate_vertices() {
     "use strict";
     var i;
     var stride;
+
+    n = parseFloat(document.getElementById("n").value);
+    offset = parseFloat(document.getElementById("theta").value);
+    if (!n || n < 1) {
+        n = 1;
+    }
+    if (!offset) {
+        offset = 0;
+    }
 
     stride = 2; /* Just P(x, y), as 3-D isn't necessary for polygons. */
     i = 0;
@@ -48,8 +58,7 @@ function main_GL() {
 
     glClearColor(1, 1, 1, 1);
     glEnableClientState(GL_VERTEX_ARRAY);
-    calculate_vertices(n, 90);
-    draw();
+    calculate_vertices();
 
     do {
         error_code = glGetError();
