@@ -32,7 +32,7 @@ function draw() {
     glDrawArrays(GL_LINE_LOOP, 0, n);
     glPointSize(5);
     glColor4f(1, 0, 0, 1);
-    glDrawArrays(GL_POINTS, 0, n + 1);
+    glDrawArrays(GL_POINTS, n, 1);
 
     return;
 }
