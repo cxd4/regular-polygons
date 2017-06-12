@@ -36,14 +36,12 @@ function calculate_vertices() {
 function draw() {
     "use strict";
 
-    glClear(GL_COLOR_BUFFER_BIT);
-    glColor4f(0, 0, 0, 1);
+    glClear(GL_COLOR_BUFFER_BIT); /*
+    glColor4f(0, 0, 0, 1); */
 
-    glDrawArrays(GL_LINE_LOOP, 0, n);
-    glPointSize(5);
+    glDrawArrays(GL_LINE_LOOP, 0, n); /*
     glColor4f(1, 0, 0, 1);
-    glDrawArrays(GL_POINTS, n, 1);
-
+    glDrawArrays(GL_POINTS, n, 1); */
     return;
 }
 
@@ -59,6 +57,9 @@ function main_GL() {
     glClearColor(1, 1, 1, 1);
     glEnableClientState(GL_VERTEX_ARRAY);
     calculate_vertices();
+
+    glColor4f(0, 0, 0, 1);
+    glPointSize(5);
 
     do {
         error_code = glGetError();
